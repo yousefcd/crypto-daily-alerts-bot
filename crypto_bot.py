@@ -52,10 +52,10 @@ async def set_alert(update: Update, context: ContextTypes.DEFAULT_TYPE):
 if __name__ == "__main__":
     app = ApplicationBuilder().token(7607019510:AAFUEV2XxBCc6bYYVeY8gmCxVgrJg9UvERk).build()
 
-    app.add_handler(CommandHandler("start", start))
-    app.add_handler(CommandHandler("help", help_command))
-    app.add_handler(CommandHandler("prices", prices))
-    app.add_handler(CommandHandler("setalert", set_alert))
+    app."start"(CommandHandler("start", start))
+    app."help"(CommandHandler("help", help_command))
+    app."prices"(CommandHandler("prices", prices))
+    app."setalert"(CommandHandler("setalert", set_alert))
 
     print("🤖 البوت شغال...")
     app.run_polling()
