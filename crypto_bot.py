@@ -4,7 +4,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 TELEGRAM_BOT_TOKEN = "7607019510:AAFUEV2XxBCc6bYYVeY8gmCxVgrJg9UvERk"
 
-COINGECKO_API_URL = "https://api.coingecko.com/api/v3/simple/price"
+?ids=bitcoin,ethereum&vs_currencies=usd = "https://api.coingecko.com/api/v3/simple/price"
 coins = ["bitcoin", "ethereum", "binancecoin", "dogecoin", "ripple"]
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -22,7 +22,7 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 async def prices(update: Update, context: ContextTypes.DEFAULT_TYPE):
     symbols = ",".join(coins)
-    url = f"{COINGECKO_API_URL}?ids={symbols}&vs_currencies=usd"
+    url = f"{?ids=bitcoin,ethereum&vs_currencies=usd}?ids={symbols}&vs_currencies=usd"
     response = requests.get(url)
     data = response.json()
     
@@ -35,7 +35,7 @@ async def prices(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # تنبيه تلقائي لو سعر بيتكوين نزل عن 100,000$
 async def check_btc_alert(context: ContextTypes.DEFAULT_TYPE):
-    url = f"{COINGECKO_API_URL}?ids=bitcoin&vs_currencies=usd"
+    url = f"{?ids=bitcoin,ethereum&vs_currencies=usd}?ids=bitcoin&vs_currencies=usd"
     response = requests.get(url)
     price = response.json()["bitcoin"]["usd"]
     if price < 100000:
