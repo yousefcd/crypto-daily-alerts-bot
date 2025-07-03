@@ -12,7 +12,7 @@ TELEGRAM_BOT_TOKEN = os.getenv("7607019510:AAFUEV2XxBCc6bYYVeY8gmCxVgrJg9UvERk")
 
 # رابط CoinGecko API
 COINGECKO_API_URL = "https://api.coingecko.com/api/v3/simple/price"
-coins = ["bitcoin", "ethereum", "binancecoin", "dogecoin", "ripple"]
+coins = ["bit", "eth", "bnb", "dogecoin", "xrp"]
 
 # دالة /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
